@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.jogodavelha;
+
 import java.awt.Color;
+
 /**
  *
  * @author laboratorio
@@ -234,7 +236,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
         if (JogadorAtual == 1) {
             jbotao1.setText("O");
             mat[0][0] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -243,7 +245,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao1.setEnabled(false);
@@ -254,7 +256,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
         if (JogadorAtual == 1) {
             jbotao5.setText("O");
             mat[1][1] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -263,7 +265,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao5.setEnabled(false);
@@ -274,7 +276,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
         if (JogadorAtual == 1) {
             jbotao6.setText("O");
             mat[1][2] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -283,7 +285,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao6.setEnabled(false);
@@ -293,7 +295,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
         if (JogadorAtual == 1) {
             jbotao8.setText("O");
             mat[2][1] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -302,7 +304,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao8.setEnabled(false);
@@ -310,12 +312,13 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbotao8ActionPerformed
 
     private void jIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jIniciarActionPerformed
-        int a,b;
-        for(a=0;a<3;a++){
-            for(b=0;b<3;b++){
+        int a, b;
+        for (a = 0; a < 3; a++) {
+            for (b = 0; b < 3; b++) {
                 mat[a][b] = 0;
+            }
         }
-        }
+        rodadas = 0;
         JogadorAtual = 1;
         jJogadorVez.setText("Jogador " + JogadorAtual);
         jbotao1.setEnabled(true);
@@ -327,7 +330,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
         jbotao7.setEnabled(true);
         jbotao8.setEnabled(true);
         jbotao9.setEnabled(true);
-        
+
         jbotao1.setText("");
         jbotao2.setText("");
         jbotao3.setText("");
@@ -341,10 +344,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jIniciarActionPerformed
 
     private void jbotao2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbotao2ActionPerformed
-         if (JogadorAtual == 1) {
+        if (JogadorAtual == 1) {
             jbotao2.setText("O");
             mat[0][1] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -353,7 +356,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao2.setEnabled(false);
@@ -361,10 +364,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbotao2ActionPerformed
 
     private void jbotao3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbotao3ActionPerformed
-         if (JogadorAtual == 1) {
+        if (JogadorAtual == 1) {
             jbotao3.setText("O");
             mat[0][2] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -373,7 +376,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao3.setEnabled(false);
@@ -384,7 +387,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
         if (JogadorAtual == 1) {
             jbotao4.setText("O");
             mat[1][0] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -393,7 +396,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao4.setEnabled(false);
@@ -404,7 +407,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
         if (JogadorAtual == 1) {
             jbotao7.setText("O");
             mat[2][0] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -413,7 +416,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao7.setEnabled(false);
@@ -424,7 +427,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
         if (JogadorAtual == 1) {
             jbotao9.setText("O");
             mat[2][2] = 1;
-             apresentaMatriz();
+            apresentaMatriz();
             JogadorAtual = 2;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         } else {
@@ -433,7 +436,7 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             JogadorAtual = 1;
             jJogadorVez.setText("Jogador " + JogadorAtual);
         }
-        
+        rodadas++;
         apresentaMatriz();
         verificaGanhador();
         jbotao9.setEnabled(false);
@@ -441,6 +444,8 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbotao9ActionPerformed
     int JogadorAtual = 0;
     int[][] mat = new int[3][3];
+    int rodadas = 0;
+
     /**
      * @param args the command line arguments
      */
@@ -471,23 +476,22 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void apresentaMatriz() {
-        int i,j;
-        for(i=0;i<3;i++){
-            for(j=0;j<3;j++){
-                System.out.print(mat[i][j]+" ");
+        int i, j;
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                System.out.print(mat[i][j] + " ");
             }
             System.out.println(" ");
         }
-        
+
     }
 
-    private void verificaGanhador() {        
-        int i,j;
+    private void verificaGanhador() {
+        int i, j;
         //Jogador 1 Vitorias
-        
+
         //Coluna
-        
-        if(mat[0][0]==1&&mat[0][1]==1&&mat[0][2]==1){
+        if (mat[0][0] == 1 && mat[0][1] == 1 && mat[0][2] == 1) {
             jJogadorVez.setText("Jogador 1 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -498,9 +502,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[1][0]==1&&mat[1][1]==1&&mat[1][2]==1){
+
+        if (mat[1][0] == 1 && mat[1][1] == 1 && mat[1][2] == 1) {
             jJogadorVez.setText("Jogador 1 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -511,9 +516,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[2][0]==1&&mat[2][1]==1&&mat[2][2]==1){
+
+        if (mat[2][0] == 1 && mat[2][1] == 1 && mat[2][2] == 1) {
             jJogadorVez.setText("Jogador 1 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -524,11 +530,11 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
+
         //Linha
-        
-        if(mat[0][0]==1&&mat[1][0]==1&&mat[2][0]==1){
+        if (mat[0][0] == 1 && mat[1][0] == 1 && mat[2][0] == 1) {
             jJogadorVez.setText("Jogador 1 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -539,9 +545,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[0][1]==1&&mat[1][1]==1&&mat[2][1]==1){
+
+        if (mat[0][1] == 1 && mat[1][1] == 1 && mat[2][1] == 1) {
             System.out.println("Jogador 1 venceu");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -552,9 +559,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[0][2]==1&&mat[1][2]==1&&mat[2][2]==1){
+
+        if (mat[0][2] == 1 && mat[1][2] == 1 && mat[2][2] == 1) {
             jJogadorVez.setText("Jogador 1 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -565,10 +573,11 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
         //Diagonais
-        
-        if(mat[0][0]==1&&mat[1][1]==1&&mat[2][2]==1){
+
+        if (mat[0][0] == 1 && mat[1][1] == 1 && mat[2][2] == 1) {
             jJogadorVez.setText("Jogador 1 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -579,9 +588,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[2][0]==1&&mat[1][1]==1&&mat[0][2]==1){
+
+        if (mat[2][0] == 1 && mat[1][1] == 1 && mat[0][2] == 1) {
             jJogadorVez.setText("Jogador 1 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -592,13 +602,12 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
+
         //Jogador 2 Vitorias
-        
         //Coluna
-        
-        if(mat[0][0]==2&&mat[0][1]==2&&mat[0][2]==2){
+        if (mat[0][0] == 2 && mat[0][1] == 2 && mat[0][2] == 2) {
             jJogadorVez.setText("Jogador 2 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -609,9 +618,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[1][0]==2&&mat[1][1]==2&&mat[1][2]==2){
+
+        if (mat[1][0] == 2 && mat[1][1] == 2 && mat[1][2] == 2) {
             jJogadorVez.setText("Jogador 2 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -622,9 +632,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[2][0]==2&&mat[2][1]==2&&mat[2][2]==2){
+
+        if (mat[2][0] == 2 && mat[2][1] == 2 && mat[2][2] == 2) {
             jJogadorVez.setText("Jogador 2 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -635,11 +646,11 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
+
         //Linha
-        
-        if(mat[0][0]==2&&mat[1][0]==2&&mat[2][0]==2){
+        if (mat[0][0] == 2 && mat[1][0] == 2 && mat[2][0] == 2) {
             jJogadorVez.setText("Jogador 2 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -650,9 +661,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[0][1]==2&&mat[1][1]==2&&mat[2][1]==2){
+
+        if (mat[0][1] == 2 && mat[1][1] == 2 && mat[2][1] == 2) {
             jJogadorVez.setText("Jogador 2 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -663,9 +675,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[0][2]==2&&mat[1][2]==2&&mat[2][2]==2){
+
+        if (mat[0][2] == 2 && mat[1][2] == 2 && mat[2][2] == 2) {
             jJogadorVez.setText("Jogador 2 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -676,11 +689,11 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
+
         //Diagonais
-        
-        if(mat[0][0]==2&&mat[1][1]==2&&mat[2][2]==2){
+        if (mat[0][0] == 2 && mat[1][1] == 2 && mat[2][2] == 2) {
             jJogadorVez.setText("Jogador 2 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -691,9 +704,10 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-        
-        if(mat[2][0]==2&&mat[1][1]==2&&mat[0][2]==2){
+
+        if (mat[2][0] == 2 && mat[1][1] == 2 && mat[0][2] == 2) {
             jJogadorVez.setText("Jogador 2 Venceu, Precione Reiniciar");
             jbotao1.setEnabled(false);
             jbotao2.setEnabled(false);
@@ -704,9 +718,13 @@ public class JogoDaVelhaFrame extends javax.swing.JFrame {
             jbotao7.setEnabled(false);
             jbotao8.setEnabled(false);
             jbotao9.setEnabled(false);
+            return;
         }
-                
+
+        if (rodadas == 9) {
+            jJogadorVez.setText("Empate! Pressione Reiniciar");
+        }
+
     }
-    
-    
+
 }
